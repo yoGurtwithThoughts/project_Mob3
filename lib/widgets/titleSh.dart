@@ -43,7 +43,7 @@ class ShTitle extends StatelessWidget{
     ),
     )
     ),
-    )
+    );
   }
 
 
