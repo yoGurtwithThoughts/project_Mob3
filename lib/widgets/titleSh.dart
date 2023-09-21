@@ -34,16 +34,10 @@ class ShTitle extends StatelessWidget{
     )
     ],
     ),
-    Padding (padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
 
-        ],
-    ),
-    )
     ),
     );
+
   }
 
 

@@ -86,6 +86,47 @@ class ShPage extends StatelessWidget{
             const SizedBox(
               height: 20,
             ),
+            Padding(padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 25.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('Лучший товар по мнению покупателей',
+                  style: TextStyle(
+                    color: Color.fromRGBO(224, 255, 255, 1),
+                    fontSize: 15,
+                  ),
+
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                  height: 200,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    promoCardWidget('assets/corp.jpg'),
+                    promoCardWidget('assets/cr9i.jpg'),
+                    promoCardWidget('assets/vicard.jpg'),
+                    promoCardWidget('assets/deepcl.jpg'),
+                  ],
+                ),),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    image: const DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage('assets/images/logO.')
+                    )
+                  ),
+                )
+
+              ],
+            ),)
           ],
         ),
       ),
