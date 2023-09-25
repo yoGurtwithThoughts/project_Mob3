@@ -109,6 +109,7 @@ class ShPage extends StatelessWidget{
                     promoCardWidget('assets/cr9i.jpg'),
                     promoCardWidget('assets/vicard.jpg'),
                     promoCardWidget('assets/deepcl.jpg'),
+
                   ],
                 ),),
                 const SizedBox(
@@ -121,14 +122,56 @@ class ShPage extends StatelessWidget{
                     image: const DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage('assets/images/logO.')
-                    )
+                    ),
                   ),
-                )
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25.5),
+                      gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        stops: const [0.3,0.9],
+                        colors: [Colors.pink.withOpacity(56.6),
+                        Colors.red.withOpacity(55),],
+                      ),
+                    ),
+                    child: const Align(
+                      alignment: Alignment.bottomRight,
+                      child:
+                      Padding(
+                        padding: EdgeInsets.all(15),
+                        child: Text('Выберите категорию',
+                          style: TextStyle(
+                            color: Color.fromRGBO(255, 215, 0, 1),
+                          ),
+                        ),
+                      ),
+                    ),
+                      Widget promoCardWidget(image) {
+                return AspectRatio(aspectRatio: 2.62/3,
+                child: Container(
+                margin: const EdgeInsets.only(right: 20),
+                decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25),
+                gradient: LinearGradient(
+                begin: Alignment.topRight,
+                stops: const [0.3,0.9],
+                colors: [Colors.pink.withOpacity(56.6),
+                Colors.red.withOpacity(55),],
+                ),
+                ),
+                ),
+                ),
+                },
+                  ),
 
+                  ),
 
               ],
-            ),)
-          ],
+            ),
+
+            ),
+      ],
+
         ),
       ),
     );
