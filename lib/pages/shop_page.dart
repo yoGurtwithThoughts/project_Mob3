@@ -105,12 +105,12 @@ class ShPage extends StatelessWidget{
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    promoCardWidget('assets/corp.jpg'),
+                  /* promoCardWidget('assets/corp.jpg'),
                     promoCardWidget('assets/cr9i.jpg'),
                     promoCardWidget('assets/vicard.jpg'),
                     promoCardWidget('assets/deepcl.jpg'),
 
-                  ],
+                 */ ],
                 ),),
                 const SizedBox(
                   height: 20,
@@ -146,7 +146,7 @@ class ShPage extends StatelessWidget{
                         ),
                       ),
                     ),
-                      Widget promoCardWidget(image) {
+                      /*Widget promoCardWidget(image) {
                 return AspectRatio(aspectRatio: 2.62/3,
                 child: Container(
                 margin: const EdgeInsets.only(right: 20),
@@ -163,15 +163,12 @@ class ShPage extends StatelessWidget{
                 ),
                 },
                   ),
+                   ),],
 
-                  ),
-
-              ],
-            ),
-
+             ),
             ),
       ],
-
+*/
         ),
       ),
     );
