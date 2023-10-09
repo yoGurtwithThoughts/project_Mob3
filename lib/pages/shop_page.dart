@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mobiledevelop/widgets/titleSh.dart';
+import 'package:mobiledevelop/widgets/stSH.dart';
 class ShPage extends StatelessWidget{
   const ShPage({super.key});
   @override
@@ -146,29 +148,16 @@ class ShPage extends StatelessWidget{
                         ),
                       ),
                     ),
-                      /*Widget promoCardWidget(image) {
-                return AspectRatio(aspectRatio: 2.62/3,
-                child: Container(
-                margin: const EdgeInsets.only(right: 20),
-                decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                gradient: LinearGradient(
-                begin: Alignment.topRight,
-                stops: const [0.3,0.9],
-                colors: [Colors.pink.withOpacity(56.6),
-                Colors.red.withOpacity(55),],
-                ),
-                ),
-                ),
-                ),
-                },
+
+
+
                   ),
                    ),],
 
              ),
             ),
       ],
-*/
+
         ),
       ),
     );

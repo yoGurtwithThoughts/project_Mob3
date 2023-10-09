@@ -31,7 +31,44 @@ class ShTitle extends StatelessWidget{
     fit: BoxFit.fill, child: Image.asset(AssorImage),
     ),
     ),
-    )
+    ),
+      Padding(padding: const EdgeInsets.symmetric(vertical: 10.5, horizontal: 7.5),
+      child: Container(
+        height: 75,
+        width: 15,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 55,
+            ),
+            Text('Перейти в каталог',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.lightBlueAccent,
+              fontSize: 25,
+            ),)
+          ],
+        ),
+
+      ),),
+      Padding(padding: const EdgeInsets.symmetric(horizontal: 12.5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text('$ASsName'),
+        Container(
+          padding: const EdgeInsets.all(4),
+          decoration: BoxDecoration(
+            color: Color.fromRGBO(255, 0, 255, 1),
+            borderRadius: BorderRadius.circular(15),
+
+          ),
+          child: const Icon(Icons.directions_run, color: Colors.white, size: 15),
+        ),
+      ],
+
+      ),)
     ],
     ),
 
