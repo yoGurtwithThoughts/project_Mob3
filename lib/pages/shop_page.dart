@@ -111,19 +111,30 @@ class ShPage extends StatelessWidget{
                   promoCardWidget('assets/corp.jpg'),
                     promoCardWidget('assets/cr9i.jpg'),
                     promoCardWidget('assets/vicard.jpg'),
-                    promoCardWidget('assets/deepcl.jpg'),
+                    promoCardWidget('assets/deepcl.jpg'),],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
 
-                 ],
-              ),),
+            /* SizedBox(
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children:  const [
+                  prasL(
+                    Shvar: 'assets/monitors.jpg',
+                  varr: 'Мониторы',)
+                ],
+              ),
+            ),*/
 
           ],
-
+        ),
       ),
-
+    ],
     ),
-
-    ],),
-    )
+      ),
     );
   }
 
@@ -153,4 +164,5 @@ class ShPage extends StatelessWidget{
     ),
     );
   }
+
   }
