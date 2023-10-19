@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:mobiledevelop/widgets/titleSh.dart';
 class ShPage extends StatelessWidget {
@@ -112,39 +113,15 @@ class ShPage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: [
                         promoCardWidget('assets/corp.jpg',
-                          const Text('Корпус от DeepCool',
-                            style:TextStyle(
-                                fontSize: 15,
-                                fontStyle: FontStyle.italic,
-                                color: Color.fromRGBO(255, 20, 147, 1)
-                            ),
-                          ),
+                          'Корпус от DeepCool',
                         ),
-                        promoCardWidget('assets/cr9i.jpg',
-                         const Text('Процессоры от Intel',
-                            style:TextStyle(
-                                fontSize: 15,
-                                fontStyle: FontStyle.italic,
-                                color: Color.fromRGBO(255, 20, 147, 1)
-                            ),
-                          ),
-                      ),
+                        promoCardWidget('assets/intel.jpg', 'Процессоры от Intel',
+                        ),
                         promoCardWidget('assets/vicard.jpg',
-                        const  Text('Видеокарта Gigabyte Aourus RTX',
-                            style:TextStyle(
-                                fontSize: 15,
-                                fontStyle: FontStyle.italic,
-                                color: Color.fromRGBO(255, 20, 147, 1)
-                            ),
-                          ),),
-                        promoCardWidget('assets/deepcl.jpg',
-                        const  Text('ПК E2407 от MSI',
-                            style:TextStyle(
-                                fontSize: 15,
-                                fontStyle: FontStyle.italic,
-                                color: Color.fromRGBO(255, 20, 147, 1)
-                            ),
-                          ),),
+                        'Видеокарта Gigabyte Aourus RTX',
+                        ),
+                        promoCardWidget('assets/deepcl.jpg', 'ПК E2407 от MSI',
+                          ),
                       ],
                     ),
                   ),
@@ -165,11 +142,13 @@ class ShPage extends StatelessWidget {
              ,),
                 SizedBox(
                  height: 25),
-
+        Padding(padding: const EdgeInsets.symmetric( horizontal: 25.0),
+        )
           ],
-        ),
-      ),
-  ]);
+           ),
+          ),
+
+  ],),),);
   }
   promoCardWidget(image,text) {
     return AspectRatio(aspectRatio: 3.33 / 3,
@@ -179,25 +158,20 @@ class ShPage extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage(image)
+              image: AssetImage(image),
+
           ),
         ),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            gradient: LinearGradient(
-                begin: Alignment.bottomRight,
-                stops: const[0.1, 0.9],
-                colors: [
-                  Color.fromRGBO(0, 0, 0, 1),
-                ]
-            ),
-          ),
+
           child: Container(
             margin: const EdgeInsets.only(right: 15),
-            child: Text('$text'),
+              child:  Text('$text',
+              style: TextStyle(
+                fontSize: 12,
+                fontStyle: FontStyle.italic,
+                  color: Color.fromRGBO(30, 144, 255, 1)
+              ),),
           ),
-        ),
       ),
     );
   }
