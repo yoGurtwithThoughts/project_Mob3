@@ -3,12 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:mobiledevelop/widgets/titleSh.dart';
 class ShPage extends StatelessWidget {
   const ShPage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black54,
-      appBar: AppBar(
+      appBar:AppBar(
         centerTitle: true,
         title:
         const Text(
@@ -28,13 +27,11 @@ class ShPage extends StatelessWidget {
               color: Colors.blue,)
         ),
       ),
+        body: SingleChildScrollView(
 
-      body: SingleChildScrollView(
-
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
+        child: Container(
+          child: Container(
+           height: 100000,
               width: double.infinity,
               decoration: const BoxDecoration(
                 color: Color.fromRGBO(0, 0, 139, 85),
@@ -86,13 +83,7 @@ class ShPage extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(padding: const EdgeInsets.symmetric(
+           Padding(padding: const EdgeInsets.symmetric(
                 horizontal: 25.0, vertical: 25.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,15 +103,11 @@ class ShPage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: [
                         promoCardWidget('assets/corpdep.jpg',
-                          'Корпус от DeepCool',
-                        ),
-                        promoCardWidget('assets/intel.jpg', 'Процессоры от Intel',
-                        ),
+                          'Корпус от DeepCool',),
+                        promoCardWidget('assets/intel.jpg', 'Процессоры от Intel',),
                         promoCardWidget('assets/vicard.jpg',
-                        'Видеокарта Gigabyte Aourus RTX',
-                        ),
-                        promoCardWidget('assets/deepcl.jpg', 'ПК E2407 от MSI',
-                          ),
+                        'Видеокарта Gigabyte Aourus RTX',),
+                        promoCardWidget('assets/deepcl.jpg', 'ПК E2407 от MSI',),
                       ],
                     ),
                   ),
@@ -146,11 +133,13 @@ class ShPage extends StatelessWidget {
           ],
            ),
           ),
+  ],
+         ),
 
-  ],),),);
+  ),),),);
   }
   promoCardWidget(image,text) {
-    return AspectRatio(aspectRatio: 3.33 / 3,
+    return AspectRatio(aspectRatio: 3.33/ 3,
       child: Container(
         margin: const EdgeInsets.only(right: 15),
         decoration: BoxDecoration(
