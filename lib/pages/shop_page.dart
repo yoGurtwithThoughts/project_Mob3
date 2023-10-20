@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:mobiledevelop/widgets/titleSh.dart';
 class ShPage extends StatelessWidget {
@@ -112,7 +111,7 @@ class ShPage extends StatelessWidget {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        promoCardWidget('assets/corp.jpg',
+                        promoCardWidget('assets/corpdep.jpg',
                           'Корпус от DeepCool',
                         ),
                         promoCardWidget('assets/intel.jpg', 'Процессоры от Intel',
